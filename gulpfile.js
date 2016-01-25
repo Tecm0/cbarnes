@@ -236,7 +236,7 @@ gulp.task('cache-config', function(callback) {
 gulp.task('clean', function() {
   return del(['.tmp', dist()]);
 });
-
+gulp.task('s', ['serve']);
 // Watch files for changes & reload
 gulp.task('serve', ['lint', 'styles', 'elements', 'images'], function() {
   browserSync({

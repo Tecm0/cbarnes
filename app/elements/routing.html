@@ -22,18 +22,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     // Middleware
-    function scrollToTop(ctx, next) {
-      app.scrollPageToTop();
-      next();
-    }
-
     function closeDrawer(ctx, next) {
       app.closeDrawer();
       next();
     }
 
     // Routes
-    page('*', scrollToTop, closeDrawer, function(ctx, next) {
+    page('*', closeDrawer, function(ctx, next) {
       next();
     });
 
@@ -45,13 +40,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.route = 'home';
     });
 
-    page('/users', function() {
-      app.route = 'users';
+    page('/work', function() {
+      app.route = 'work';
     });
-
-    page('/users/:name', function(data) {
-      app.route = 'user-info';
-      app.params = data.params;
+      
+    page('/gallery', function() {
+      app.route = 'gallery';
     });
 
     page('/contact', function() {

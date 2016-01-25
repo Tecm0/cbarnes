@@ -9,43 +9,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="my-list">
+<dom-module id="my-work">
   <template>
+    <style include="shared-styles"></style>
     <style>
       :host {
         display: block;
       }
+     
+        .page-title {
+            color: white;
+            
+        }
+        .paper-font-body2 {
+            color: white;
+        }
+        iron-image{
+            border-radius: 300px;
+        }
     </style>
-    <ul>
-      <template is="dom-repeat" items="{{items}}">
-        <li><span class="paper-font-body1">{{item}}</span></li>
-      </template>
-    </ul>
+    <div class="horizontal layout center-center">
+    <div class="vertical layout center-center">
+    <h2 class="page-title">My Work</h2>
+            <span class="paper-font-body2">404 page not found...</span>
+            <iron-image sizing="contain" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);width:300px; height:300px;" src="../../images/404.jpg"></iron-image>
+        </div>
+      </div>
   </template>
 
   <script>
     (function() {
       'use strict';
-  
+
       Polymer({
-        is: 'my-list',
+        is: 'my-work',
+
         properties: {
-          items: {
-            type: Array,
-            notify: true,
-          }
-        },
-        ready: function() {
-          this.items = [
-            'Responsive Web App boilerplate',
-            'Iron Elements and Paper Elements',
-            'End-to-end Build Tooling (including Vulcanize)',
-            'Unit testing with Web Component Tester',
-            'Routing with Page.js',
-            'Offline support with the Platinum Service Worker Elements'
-          ];
+
         }
       });
     })();
   </script>
+
 </dom-module>

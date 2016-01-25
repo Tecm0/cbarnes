@@ -23,7 +23,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   :root {
     --dark-primary-color: #303F9F;
-    --default-primary-color: #3F51B5;
+    --default-primary-color: #0074D9;
     --light-primary-color: #C5CAE9;
     --text-primary-color: #ffffff; /*text/icons*/
     --accent-color: #FF4081;
@@ -34,11 +34,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     --divider-color: #B6B6B6;
 
     /* Components */
-
+    --paper-material-background-image: url(../images/paper_bg.JPG);
+    --content-background-image: url(../images/sand.JPG);  
+    /* maintoolbar */
+    --mainbar-background-image: url(../images/top_cloud_thin.png);
     /* paper-drawer-panel */
     --drawer-menu-color: #ffffff;
     --drawer-border-color: 1px solid #ccc;
     --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
+    --drawer-toolbar-background-image: url(../images/top_cloud_thin.png);
 
     /* paper-menu */
     --paper-menu-background-color: #fff;
@@ -47,13 +51,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   /* General styles */
 
+    a {
+      color: inherit;
+      text-decoration: inherit; /* no underline */
+    }
+    a:hover {
+        color: #0074D9;
+    }
+    
+    #headerPanelMain {
+            background-image: var(--content-background-image);
+    background-size: cover;
+    }  
+    
+    
+    
   #drawerToolbar {
     color: var(--secondary-text-color);
     background-color: var(--drawer-menu-color);
     border-bottom: var(--drawer-toolbar-border-color);
+    background-image: var(--drawer-toolbar-background-image);
+    background-size: cover;
   }
 
-  paper-scroll-header-panel {
+  paper-header-panel {
     height: 100%;
   }
 
@@ -64,6 +85,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     width: calc(98.66% - 16px);
     margin: 16px auto;
     background: white;
+    background-image: var(--paper-material-background-image);
+    background-size:cover;
   }
 
   paper-menu iron-icon {
@@ -97,7 +120,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     -webkit-transform-origin: left center;
     transform-origin: left center;
   }
-
+    
+  #mainToolbar {
+    background-image: var(--mainbar-background-image);
+    background-size: cover;
+  }
   #mainToolbar .middle-container  {
     height: 100%;
     margin-left: 48px;
@@ -118,6 +145,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   /* Height of the scroll area */
   .content {
     height: 900px;
+
   }
 
   #toast .toast-hide-button {

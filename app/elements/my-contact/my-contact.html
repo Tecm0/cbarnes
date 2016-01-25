@@ -1,0 +1,72 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-contact">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+      :host {
+        display: block;
+      }
+        
+              a {
+          color: inherit;
+          text-decoration: inherit; /* no underline */
+        }
+        a:hover {
+            color: #303F9F;
+        }
+    </style>
+      <div class="horizontal layout center-center">
+
+      <div class="vertical layout">
+                        <h2 class="page-title">Contact</h2>
+      <span class="paper-font-body2">You can find me on <a  href="http://www.facebook.com/caleblol">Facebook.</a></span>
+      
+                  <a  href="http://www.youtube.com/user/oweeet">
+                    <img src="https://dl.dropboxusercontent.com/u/869809/social%20icons/youtube.png" width="23">
+                    <span class="paper-font-body2">YouTube - oweeet</span>
+                  </a>
+
+                  <a  href="http://www.facebook.com/caleblol">
+                    <img src="https://dl.dropboxusercontent.com/u/869809/social%20icons/facebook.png" width="23">
+                    <span class="paper-font-body2">Facebook - Caleb Barnes</span>
+                  </a>
+
+                  <a  href="http://www.instagram.com/kitty_princess__">
+                    <img src="https://dl.dropboxusercontent.com/u/869809/social%20icons/instagram.png" width="23">
+                    <span class="paper-font-body2">Instagram - Kitty_Princess__</span>
+                  </a>
+
+                  <a  href="http://www.twitter.com/tecm0">
+                    <img src="https://dl.dropboxusercontent.com/u/869809/social%20icons/twitter.png" width="23">
+                    <span class="paper-font-body2">Twitter - tecm0</span>
+                  </a>
+
+          </div>
+          </div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'my-contact',
+
+        properties: {
+
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

@@ -1,0 +1,105 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-home">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+      :host {
+        display: block;
+      }
+      a {
+          color: inherit;
+          text-decoration: inherit; /* no underline */
+        }
+        a:hover {
+            color: #303F9F;
+        }
+        
+            .calebface {
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+            margin:50px;
+            width:400px; 
+            height:400px;
+
+        }
+        
+        
+    @media (max-width: 1020px) {
+        .calebface {
+            width: 250px;
+            height: 250px;
+        }
+
+        
+    }
+
+    </style>
+
+    <div class="horizontal layout center-center wrap-reverse">
+        
+      <div class="textabout">
+        <h2 class="">Hello,</h2>
+        <p class="paper-font-body2">I'm Caleb, a computer technician, and web developer.<br>I offer a variety of services, including, but not limited to:</p>
+          <li><p class="paper-font-body2">Website design and development</p></li>
+          <li><p class="paper-font-body2">Computer component selection, build, and OS installation</p></li>
+        <li><p class="paper-font-body2">Virus removal and tech support</p></li>
+
+        <h2 class="">About me</h2>
+
+        <p class="paper-font-body2">Nerd, animal lover, adventurer, cat.<br>Love to see the world from new perspectives.<br>Resides in Port Alberni, BC, Canada.</p>
+<!--<br>Quiet unless the conversation is meaningful. Slow to pass judgment-->
+            <div class="vertical layout">
+                    <h2 class="">Social Media</h2>
+                  <a  href="http://www.youtube.com/user/oweeet">
+                    <img src="../../images/social-icons/YouTube-icon-full_color.png" width="23">
+                    <span class="paper-font-body2">YouTube - oweeet</span>
+                  </a>
+
+                  <a  href="http://www.facebook.com/caleblol">
+                    <img src="../../images/social-icons/FB-f-Logo__blue_50.png" width="23">
+                    <span class="paper-font-body2">Facebook - Caleb Barnes</span>
+                  </a>
+
+                  <a  href="http://www.instagram.com/kitty_princess__">
+                    <img src="../../images/social-icons/Instagram_Icon_Large.png" width="23">
+                    <span class="paper-font-body2">Instagram - Kitty_Princess__</span>
+                  </a>
+
+                  <a  href="http://www.twitter.com/tecm0">
+                    <img src="../../images/social-icons/twitter.png" width="23">
+                    <span class="paper-font-body2">Twitter - tecm0</span>
+                  </a>
+
+          </div>
+      </div>
+        <div>
+      <iron-image class="calebface" src="../../images/caleb.jpg" sizing="contain"></iron-image>
+            </div>
+    </div>
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'my-home',
+
+        properties: {
+
+        }
+      });
+    })();
+  </script>
+
+</dom-module>
